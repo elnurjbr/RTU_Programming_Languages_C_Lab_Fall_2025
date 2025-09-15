@@ -3,6 +3,8 @@
 
 int main(int argc, char *argv[]) {
   // This is your first C program my friend
+  printf("Yo my name is Elnur Jabbarov \n");
+  printf("Today i am going to do my Lab\n");
   printf("Hello, RTU World from C Lab in 2025!\n");
   printf("You passed %d argument(s).\n", argc - 1);
   for (int i = 1; i < argc; ++i) {
