@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include <math.h>
+
+int is_prime(int n) {
+	if (n < 2) return 0;
+	if (n == 2) return 1;
+	if (n % 2 == 0) return 0;
+	int i;
+	for (i = 3; i <= (int)sqrt(n); i += 2) {
+		if (n % i == 0) return 0;
+	}
+	return 1;
+}
+
+int main() {
+	int n, count = 0;
+	printf("Enter n: ");
+	if (scanf("%d", &n) != 1) {
+		printf("Invalid input.\n");
+		return 1;
+	}
+	if (n < 2) {
+		printf("Error: n must be at least 2.\n");
+		return 1;
+	}
+	for (int i = 2; i <= n; i++) {
+		if (is_prime(i)) {
+			printf("%d ", i);
+			count++;
+		}
+	}
+	printf("\nTotal primes found: %d\n", count);
+	return 0;
+}
